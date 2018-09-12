@@ -100,63 +100,6 @@ def treina_matrix(X1,X2):
     return MATRIX_MEDIA
     
 
-def testa_matrix(X1,X2):
-    MATRIX_SOMA = [0,0,0,0,0,0,0,0,0,0]
-    MATRIX_CONT = [0,0,0,0,0,0,0,0,0,0]
-
-    for it_iterator in range(100):
-        if X1_traning[it_iterator] < 3:
-            if X2_traning[it_iterator] < 3:
-                m = 1
-                MATRIX_SOMA[m] = MATRIX_SOMA[m] + X1_traning[it_iterator] + X2_traning[it_iterator]
-                MATRIX_CONT[m] = MATRIX_CONT[m] + 1 
-            elif X2_traning[it_iterator] < 6:
-                m = 2
-                MATRIX_SOMA[m] = MATRIX_SOMA[m] + X1_traning[it_iterator] + X2_traning[it_iterator]
-                MATRIX_CONT[m] = MATRIX_CONT[m] + 1
-            elif X2_traning[it_iterator] < 9:
-                m = 3
-                MATRIX_SOMA[m] = MATRIX_SOMA[m] + X1_traning[it_iterator] + X2_traning[it_iterator]
-                MATRIX_CONT[m] = MATRIX_CONT[m] + 1
-    
-        elif X1_traning[it_iterator] < 6:
-            if X2_traning[it_iterator] < 3:
-                m = 4
-                MATRIX_SOMA[m] = MATRIX_SOMA[m] + X1_traning[it_iterator] + X2_traning[it_iterator]
-                MATRIX_CONT[m] = MATRIX_CONT[m] + 1
-            
-            elif X2_traning[it_iterator] < 6:
-                m = 5
-                MATRIX_SOMA[m] = MATRIX_SOMA[m] + X1_traning[it_iterator] + X2_traning[it_iterator]
-                MATRIX_CONT[m] = MATRIX_CONT[m] + 1
-            
-            elif X2_traning[it_iterator] < 9:
-                m = 6
-                MATRIX_SOMA[m] = MATRIX_SOMA[m] + X1_traning[it_iterator] + X2_traning[it_iterator]
-                MATRIX_CONT[m] = MATRIX_CONT[m] + 1
-    
-        elif X1_traning[it_iterator] < 9:
-            if X2_traning[it_iterator] < 3:
-                m = 7
-                MATRIX_SOMA[m] = MATRIX_SOMA[m] + X1_traning[it_iterator] + X2_traning[it_iterator]
-                MATRIX_CONT[m] = MATRIX_CONT[m] + 1
-            
-            elif X2_traning[it_iterator] < 6:
-                m = 8
-                MATRIX_SOMA[m] = MATRIX_SOMA[m] + X1_traning[it_iterator] + X2_traning[it_iterator]
-                MATRIX_CONT[m] = MATRIX_CONT[m] + 1
-            
-            elif X2_traning[it_iterator] < 9:
-                m = 9
-                MATRIX_SOMA[m] = MATRIX_SOMA[m] + X1_traning[it_iterator] + X2_traning[it_iterator]
-                MATRIX_CONT[m] = MATRIX_CONT[m] + 1
-         
-    MATRIX_MEDIA = [0,0,0,0,0,0,0,0,0,0]
-    for it_iterator in range(10):
-        if MATRIX_CONT[it_iterator] != 0:
-            MATRIX_MEDIA[it_iterator] = MATRIX_SOMA[it_iterator] / MATRIX_CONT[it_iterator]  
-        
-    return MATRIX_MEDIA
 
 def testa_X1_X2(X1,X2,MATRIX_MEDIA_LOCAL,ax,plt):
   
@@ -280,3 +223,60 @@ convert_matrix_point_test(X1_test, X2_test, MATRIX_MEDIA, ax, plt)
 
 
 
+#def testa_matrix(X1,X2):
+#    MATRIX_SOMA = [0,0,0,0,0,0,0,0,0,0]
+#    MATRIX_CONT = [0,0,0,0,0,0,0,0,0,0]
+#
+#    for it_iterator in range(100):
+#        if X1_traning[it_iterator] < 3:
+#            if X2_traning[it_iterator] < 3:
+#                m = 1
+#                MATRIX_SOMA[m] = MATRIX_SOMA[m] + X1_traning[it_iterator] + X2_traning[it_iterator]
+#                MATRIX_CONT[m] = MATRIX_CONT[m] + 1 
+#            elif X2_traning[it_iterator] < 6:
+#                m = 2
+#                MATRIX_SOMA[m] = MATRIX_SOMA[m] + X1_traning[it_iterator] + X2_traning[it_iterator]
+#                MATRIX_CONT[m] = MATRIX_CONT[m] + 1
+#            elif X2_traning[it_iterator] < 9:
+#                m = 3
+#                MATRIX_SOMA[m] = MATRIX_SOMA[m] + X1_traning[it_iterator] + X2_traning[it_iterator]
+#                MATRIX_CONT[m] = MATRIX_CONT[m] + 1
+#    
+#        elif X1_traning[it_iterator] < 6:
+#            if X2_traning[it_iterator] < 3:
+#                m = 4
+#                MATRIX_SOMA[m] = MATRIX_SOMA[m] + X1_traning[it_iterator] + X2_traning[it_iterator]
+#                MATRIX_CONT[m] = MATRIX_CONT[m] + 1
+#            
+#            elif X2_traning[it_iterator] < 6:
+#                m = 5
+#                MATRIX_SOMA[m] = MATRIX_SOMA[m] + X1_traning[it_iterator] + X2_traning[it_iterator]
+#                MATRIX_CONT[m] = MATRIX_CONT[m] + 1
+#            
+#            elif X2_traning[it_iterator] < 9:
+#                m = 6
+#                MATRIX_SOMA[m] = MATRIX_SOMA[m] + X1_traning[it_iterator] + X2_traning[it_iterator]
+#                MATRIX_CONT[m] = MATRIX_CONT[m] + 1
+#    
+#        elif X1_traning[it_iterator] < 9:
+#            if X2_traning[it_iterator] < 3:
+#                m = 7
+#                MATRIX_SOMA[m] = MATRIX_SOMA[m] + X1_traning[it_iterator] + X2_traning[it_iterator]
+#                MATRIX_CONT[m] = MATRIX_CONT[m] + 1
+#            
+#            elif X2_traning[it_iterator] < 6:
+#                m = 8
+#                MATRIX_SOMA[m] = MATRIX_SOMA[m] + X1_traning[it_iterator] + X2_traning[it_iterator]
+#                MATRIX_CONT[m] = MATRIX_CONT[m] + 1
+#            
+#            elif X2_traning[it_iterator] < 9:
+#                m = 9
+#                MATRIX_SOMA[m] = MATRIX_SOMA[m] + X1_traning[it_iterator] + X2_traning[it_iterator]
+#                MATRIX_CONT[m] = MATRIX_CONT[m] + 1
+#         
+#    MATRIX_MEDIA = [0,0,0,0,0,0,0,0,0,0]
+#    for it_iterator in range(10):
+#        if MATRIX_CONT[it_iterator] != 0:
+#            MATRIX_MEDIA[it_iterator] = MATRIX_SOMA[it_iterator] / MATRIX_CONT[it_iterator]  
+#        
+#    return MATRIX_MEDIA
