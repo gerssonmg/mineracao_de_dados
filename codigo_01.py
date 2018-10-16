@@ -8,7 +8,6 @@ Created on Mon Aug 13 16:57:44 2018
 from numpy import matrix
 import matplotlib.pyplot as plt
 
-import csv
 
 X = matrix([[1.1,1],
             [1.3,1],
